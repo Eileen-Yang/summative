@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import axios from 'axios'
+import axios from 'axios';
 
 export const useStore = defineStore('store', {
   state: () => {
@@ -10,14 +10,14 @@ export const useStore = defineStore('store', {
   },
   actions: {
     async getMovies(id) {
-      let data = (await axios.get(`https://api.themoviedb.org/3/discover/movie`, {
+      let data = (await axios.get("https://api.themoviedb.org/3/discover/movie", {
         params: {
-          api_key: '289d7511f89338dfaa9d5bc06621094c',
+          api_key: "289d7511f89338dfaa9d5bc06621094c",
           with_genres: id,
           include_adult: false,
         }
       })).data.results;
-
+      
       this.movies = data.map((movie) => {
         return {
           id: movie.id,
@@ -29,7 +29,7 @@ export const useStore = defineStore('store', {
       this.cart.set(id, data);
     },
     removeFromCart(id) {
-      this.cart.delete(id)
+      this.cart.delete(id);
     }
   }
 });

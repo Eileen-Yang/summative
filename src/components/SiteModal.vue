@@ -38,6 +38,7 @@ function Opentab() {
               poster: data.poster_path,
               title: data.title,
               date: data.release_date,
+              tagline: data.tagline,
             })
           "
         >
