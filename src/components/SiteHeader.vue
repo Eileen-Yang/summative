@@ -32,5 +32,6 @@ button {
   color: white;
   border-radius: 12px;
   font-size: 150%;
+  cursor: pointer;
 }
 </style>

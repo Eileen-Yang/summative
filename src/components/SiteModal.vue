@@ -39,6 +39,7 @@ function Opentab() {
               title: data.title,
               date: data.release_date,
               tagline: data.tagline,
+              overview: data.overview,
             })
           "
         >
