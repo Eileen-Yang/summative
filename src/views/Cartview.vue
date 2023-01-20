@@ -11,7 +11,7 @@ const store = useStore();
       <h2>{{ movie.title }}</h2>
       <h3>{{ movie.date }}</h3>
       <h4>"{{ movie.tagline }}"</h4>
-      <button @click="store.removeFromCart(movie.id)">Remove</button>
+      <button @click="store.removeFromCart(movie.id)"><i class="fa fa-trash"></i></button>
     </div>
   </div>
 </template>
@@ -55,5 +55,10 @@ button {
   width: fit-content;
   align-self: left;
   margin-top: 2%;
+}
+
+i {
+  background-color: #c5c6c7;
+  color: white;
 }
 </style>
