@@ -27,7 +27,7 @@ const getGenres = async () => {
   <div class="header-container">
     <h1>TRENDING MOVIES</h1>
     <RouterLink to="/cart" custom v-slot="{ navigate }">
-      <button @click="navigate" role="link" class="cart">CART</button>
+      <button @click="navigate" role="link" class="cart"><i class="fa fa-shopping-cart"></i></button>
     </RouterLink>
   </div>
   <label>Search by Genre:</label>
@@ -66,8 +66,16 @@ button {
   background-color: #c5c6c7;
   color: white;
   border-radius: 12px;
-  font-size: 150%;
+  font-size: 250%;
   cursor: pointer;
+  width: fit-content;
+  align-self: left;
+  padding-right: 1.5%;
+}
+
+i {
+  background-color: #c5c6c7;
+  color: white;
 }
 
 label {
@@ -81,6 +89,7 @@ select {
 
 option {
   font-size: 150%;
+  padding: 0%;
 }
 
 .poster {
